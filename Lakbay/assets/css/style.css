@@ -1,0 +1,139 @@
+*{
+  margin: 0;
+}
+.rightside{
+  margin-top: 300px;
+  margin-left: 20px;
+}
+.grid {
+    height: 560px;
+    min-width: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 80px;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding:5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #090909;
+    color: #000000;
+}
+
+.grid div {
+    height: 70px;
+    width: 70px;
+}
+
+h3 {
+ font-family: "Montserrat", sans-serif;
+ text-transform: uppercase;
+}
+
+h1 {
+ font-family: "Montserrat", sans-serif;
+ text-transform: uppercase;
+ margin-top: -10px;
+ margin-top: 20px;
+}
+
+.invisible {
+    background-color: rgb(0, 0, 0);
+}
+
+body {
+  background-image: url("../../assets/image/Primary/MG.png");
+  display: flex;
+  background-repeat: no-repeat;
+}
+
+.score-board {
+  background-color: pink;
+  border-radius: 10px;
+  margin-top: 200px;
+  margin-left: 200px;
+  margin-bottom: 450px;
+  min-width: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(#FFB6C1, #FFC0CB);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+  color: #534c44;
+}
+
+.continue{
+  height: 50px;
+  width: 50px;
+  padding: 20px;
+  position: fixed;
+  top: 65%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  z-index: 99999; 
+}
+.continue:hover{
+  cursor: pointer;
+}
+/* Add this to your styles */
+.candy-drop-animation {
+  animation: candyDrop 0.5s ease-in-out;
+}
+
+@keyframes candyDrop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.candy-animation {
+  animation: candyMove 0.5s ease-in-out;
+}
+
+@keyframes candyMove {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Add these animations in your CSS */
+.candy-drop-animation {
+  transition: transform 0.5s ease-in-out;
+}
+
+.candy-move-left-animation {
+  animation: moveLeft 0.5s ease-in-out;
+}
+
+.candy-move-right-animation {
+  animation: moveRight 0.5s ease-in-out;
+}
+
+@keyframes moveLeft {
+  from {
+    transform: translateX(50px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveRight {
+  from {
+    transform: translateX(-50px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
