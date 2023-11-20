@@ -1,11 +1,17 @@
+<!-- <?php 
+include  'includes/head.php';
+?> -->
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>LAKBAY</title>
-  <link rel="stylesheet" href="assets/css/start.css">
-  <link rel="icon" href="assets/image/Primary/Startup.png">
-</head>
+    <head>
+      <title>LAKBAY</title>
+      <link rel="icon" href="../assets/image/Primary/Startup.png">
+      <link rel="stylesheet" href="assets/css/font.css">
+      <link rel="stylesheet" href="assets/css/start.css">
+
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
+    </head>
 
 <body class="body">
 
@@ -15,7 +21,7 @@
   </div>
 
 
-
+<!-- 
   <div class="audio-holder">
   <audio id="backgroundMusic" autoplay muted>
     <source src="assets/sound/CookingMusic.mp3" type="audio/mp3">
@@ -23,7 +29,7 @@
   </audio>
 
   <button onclick="startAudio()">Start Audio</button>
-  </div>
+  </div> -->
   <script>
     function startAudio() {
       const backgroundMusic = document.getElementById('backgroundMusic');
@@ -43,7 +49,7 @@
             // Add a click event listener
             startButton.addEventListener('click', function () {
                 // Redirect to the desired page
-                window.location.href = 'includes/SaveSlot.html';
+                window.location.href = 'includes/CharSelection.html';
             });
         });
   </script>

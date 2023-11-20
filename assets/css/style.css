@@ -66,15 +66,30 @@ body {
 
 .continue{
   height: 50px;
-  width: 50px;
+  width: 55px;
   padding: 20px;
   position: fixed;
   top: 65%;
   left: 48%;
   transform: translate(-50%, -50%);
   z-index: 99999; 
+  /* background-color: red; */
 }
 .continue:hover{
+  cursor: pointer;
+}
+.exit{
+  height: 50px;
+  width: 55px;
+  padding: 20px;
+  position: fixed;
+  top: 29%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  z-index: 999999; 
+  /* background-color: red; */
+}
+.exit:hover{
   cursor: pointer;
 }
 /* Add this to your styles */

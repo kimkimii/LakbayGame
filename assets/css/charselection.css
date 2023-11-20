@@ -1,0 +1,163 @@
+* {
+    font-family: 'magicsound', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../assets/image/Character/CharBG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999999999; /* Set a higher value */
+}
+
+.modal-content {
+    width: 100%;
+    padding: 20px;
+    top: -10%;
+
+    position: relative;
+    z-index: 1;
+}
+
+.modal img {
+    width: 100%;
+    height: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h2{
+    height: 1000px;
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 100%;
+    left: 92%;
+    color: rgb(200, 255, 0);
+    transform: translate(-50%, -50%);
+    z-index: 9999; 
+}
+ .Fmodal {
+    display: none;
+    position: fixed;
+    top: 47%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    z-index: 99;
+  }
+ .Mmodal {
+    display: none;
+    position: fixed;
+    top: 47%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    z-index: 99999;
+  }
+  .Fmodal img{
+    width: 200px;
+    height: 530px;
+  }
+  .Mmodal img{
+    width: 200px;
+    height: 530px;
+  }
+
+
+.sign{
+    width: 500px;
+    height: 200px;
+    /* background-color: red; */
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left:-8%;
+    transform: translate(-50%, -50%);
+    z-index: 99; /* Adjust the z-index as needed */
+}
+.Mcharacter{
+    width: 500px;
+    height: 200px;
+    padding: 20px;
+    position: fixed;
+    top: 20%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Adjust the z-index as needed */
+}
+.Mcharacter:hover{
+    cursor: pointer;
+}
+.Fcharacter {
+    width: 500px;
+    height: 200px;
+    padding: 20px;
+    top: 20%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    z-index: 99; /* Adjust the z-index as needed */
+    position: fixed;
+}
+
+.Fcharacter:hover {
+    cursor: pointer;
+}
+
+.inputholder {
+    width: 300px;
+    height: 200px;
+    /* background-color: red; */
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Adjust the z-index as needed */
+}
+
+.inputholder label {
+    margin-bottom: 10px; /* Add margin below the label for spacing */
+}
+
+.inputholder input {
+    font-family: magicsound;
+    padding: 8px; /* Add padding to the input for better visual appearance */
+    margin-bottom: 10px; /* Add margin below the input for spacing */
+}
+
+.inputholder button {
+    padding: 10px; /* Add padding to the button for better visual appearance */
+}
+.username{
+    font-family: 'magicsound';
+}

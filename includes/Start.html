@@ -1,3 +1,6 @@
+<!-- <?php 
+include  'head.php';
+?> -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -6,7 +9,6 @@
     <link rel="icon" href="../assets/image/Primary/Startup.png">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/score.css">
-
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
   </head>
 
@@ -29,6 +31,7 @@
           <img src="../assets/image/Goal/YOURSCORE.png" alt="Popup Image">
           <h2 id="finalscore"></h2>
           <div class="continue" id="continuestage"></div>
+          <div class="exit" id="exit"></div>
       </div>
   </div>
 
@@ -39,14 +42,19 @@
     document.addEventListener('DOMContentLoaded', function () {
       // Get the start button element
       const continuestage = document.getElementById('continuestage');
-      
+      const exit = document.getElementById('exit');
+
 
       // Add a click event listener
       continuestage.addEventListener('click', function () {
           // Redirect to the desired page
           window.location.href = '../includes/map.html';
       });
-      
+         // Add a click event listener
+      exit.addEventListener('click', function () {
+          // Redirect to the desired page
+          window.location.href = '../includes/map.html';
+      });
     });
     </script>
   </body>
