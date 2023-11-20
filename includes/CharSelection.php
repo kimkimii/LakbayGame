@@ -1,0 +1,108 @@
+<?php 
+include  'head.php';
+?>
+<!DOCTYPE html>
+    <head>
+      <link rel="stylesheet" href="../assets/css/charselection.css">
+      <!-- <link rel="stylesheet" href="../assets/css/username.css"> -->
+
+    </head>
+    <body>
+
+    <div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img src="../assets/image/Character/CutsceneWood.png" alt="Popup Image">
+        <h2 id="finalscore"></h2>
+        
+        <div class="inputholder">
+            <h1 id="username" for="username">Username:</h1>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+            <button onclick="submitUsername()">Submit</button>
+        </div>
+    </div>
+</div>
+
+
+  <div class="d1">
+    <div class="sign">
+      <img src="../assets/image/Character/SIGN.png">
+    </div>
+    <div class="Mcharacter" onmouseover="showModal('MmodalMCharacter')" onmouseout="hideModal('MmodalMCharacter')">
+      <img src="../assets/image/Character/JCharacter.png">
+    </div>
+    <div class="Fcharacter" onmouseover="showModal('modalFCharacter')" onmouseout="hideModal('modalFCharacter')">
+      <img src="../assets/image/Character/MCharacter.png">
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div id="MmodalMCharacter" class="Mmodal">
+   <img id="MmodalMCharacterimg" src="../assets/image/Character/Juan1.png">
+  </div>
+
+  <div id="modalFCharacter" class="Fmodal">
+    <img id="modalFCharacterimg" src="../assets/image/Character/Maria1.png">
+  </div>
+
+
+
+  <script>
+    
+    function submitUsername(){
+      window.location.href = '../includes/Start.php';
+    }
+    
+      function openModal() {
+        const modal = document.getElementById('myModal');
+        modal.style.display = 'block';
+      }
+
+      function closeModal() {
+        const modal = document.getElementById('myModal');
+        modal.style.display = 'none';
+      }
+
+      const MmodalMCharacter = document.getElementById('MmodalMCharacter');
+      const MmodalMCharacterimg = document.getElementById('MmodalMCharacterimg');
+      const modalFCharacter = document.getElementById('modalFCharacter');
+      const modalFCharacterimg = document.getElementById('modalFCharacterimg');
+    
+      function showModal(modalId) {
+      document.getElementById(modalId).style.display = "block";
+
+    }
+
+    function hideModal(modalId) {
+      document.getElementById(modalId).style.display = "none";
+    }
+
+
+
+      // Add a click event listener
+      MmodalMCharacter.addEventListener('click', function () {
+          // Redirect to the desired page
+          openModal();
+      });
+         // Add a click event listener
+         MmodalMCharacterimg.addEventListener('click', function () {
+          // Redirect to the desired page
+          openModal();
+      });
+
+            // Add a click event listener
+            modalFCharacter.addEventListener('click', function () {
+          // Redirect to the desired page
+          openModal();
+      });
+         // Add a click event listener
+         modalFCharacterimg.addEventListener('click', function () {
+          // Redirect to the desired page
+          openModal();
+      });
+
+
+
+  </script>
+</body>
+</html>

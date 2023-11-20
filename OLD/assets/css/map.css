@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+  }
+
+  body {
+    background-image: url("../../assets/image/Maps/MAP-LEVEL-BLANK.png");
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+
+  
+  
+  /* Add this to your styles */
+  .candy-drop-animation {
+    animation: candyDrop 0.5s ease-in-out;
+  }
+  
+  @keyframes candyDrop {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  
+  .candy-animation {
+    animation: candyMove 0.5s ease-in-out;
+  }
+  
+  @keyframes candyMove {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Add these animations in your CSS */
+  .candy-drop-animation {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .candy-move-left-animation {
+    animation: moveLeft 0.5s ease-in-out;
+  }
+  
+  .candy-move-right-animation {
+    animation: moveRight 0.5s ease-in-out;
+  }
+  
+  @keyframes moveLeft {
+    from {
+      transform: translateX(50px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes moveRight {
+    from {
+      transform: translateX(-50px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  

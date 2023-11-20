@@ -1,0 +1,15 @@
+
+<?php 
+include  'head.php';
+?>
+<!DOCTYPE html>
+<html>
+   
+    <body class="body">
+
+
+        
+        
+
+    </body>
+</html>

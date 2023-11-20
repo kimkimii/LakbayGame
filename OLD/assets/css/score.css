@@ -1,0 +1,42 @@
+/* Your existing styles */
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    height: 1000px;
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    z-index: 999; 
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+h2{
+    height: 1000px;
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 100%;
+    left: 92%;
+    color: rgb(200, 255, 0);
+    transform: translate(-50%, -50%);
+    z-index: 9999; 
+}

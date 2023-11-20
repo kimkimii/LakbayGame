@@ -1,0 +1,139 @@
+*,body, html {
+    margin: 0;
+    padding: 0;
+}
+.d1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../assets/image/Primary/MainScreen.png);
+    background-size: cover;
+ }
+ .d1 img {
+    box-sizing: border-box;
+
+    max-width: 100%;
+    max-height: 100%;
+ }
+
+ .audio-holder{
+    margin-top: -700px;
+    z-index: 9999;
+    position: absolute;
+ }
+
+ .startbutton {
+    width: 500px;
+    height: 100px;
+    /* background-color: red; */
+    padding: 20px;
+    position: fixed;
+    top: 54%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Adjust the z-index as needed */
+}
+.startbutton:hover{
+    cursor: pointer;
+}
+
+.b{
+    margin: 0px;
+}
+ .h1{
+    display:flex;
+    
+ }
+
+.b1{
+    width: 300px;
+    height: 50px;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 40px;
+    background-color:  green;
+    border: none;
+    border-radius: 50px;
+    margin-top: 5px;
+    align-items: center;
+    margin-left: 270;
+    cursor: pointer;
+
+}
+
+.b1:hover{
+    background-color: white;
+    color:tomato;
+    transition-duration: 100ms;
+
+}
+
+@font-face {
+    font-family: "shallo";
+    src: url("nh.ttf");
+
+}
+
+@font-face {
+    font-family:"nh";
+    src: url("nh.tff");
+
+}
+
+.p{
+    font-family:"shallo";
+    position:absolute;
+    margin-top:-400px;
+    font-size: 80px;
+    margin-left: 100px;
+    color: red;
+}
+
+.p1{
+    font-family: "shallo";
+    position: absolute;
+    margin-top: -300px;
+    font-size: 60px;
+    color: red
+}
+
+.i{
+    height: 700px;
+    position: absolute;
+    transform: scaleX(-1);
+    margin-left: 700px;
+    margin-top: 20px;
+}
+
+
+.p2{
+    font-family: "z";
+    color: gold;
+    margin-left: 100px;
+    margin-top: 750px;
+    position: absolute;
+
+}
+
+.a{
+    text-decoration: none;
+    text-decoration: aliceblue;
+    color: white;
+}
+
+.a:hover{
+    background-color: white;
+    color: tomato;
+    transition-duration: 100ms;
+}
+
+.p3{
+    font-family: "z";
+    color:gold;
+    margin-left: 100px;
+    margin-top: 700px;
+    position: absolute;
+}
+

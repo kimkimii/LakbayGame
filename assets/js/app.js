@@ -149,15 +149,25 @@ function hasImmediateMatches() {
   
     // Check for matches after the candies have settled
     setTimeout(() => {
-      if (!checkForMatches()) {
-        // If there are no matches, move the candies back to their original positions
-        squares[squareIdBeingReplaced].style.backgroundImage = colorBeingReplaced;
-        squares[squareIdBeingDragged].style.backgroundImage = colorBeingDragged;
-        animateInvalidMove();
+      const matchFound = checkForMatches();
+  
+      if (!matchFound) {
+        // If there are no matches, move the candies into squares below
+        moveIntoSquareBelow();
+  
+        // Check for matches after moving candies
+        setTimeout(() => {
+          if (checkForMatches()) {
+            // If there are new matches, refill the board
+            refillBoard();
+          }
+        }, 500); // Adjust the timeout based on your animation duration
       }
+  
       squareIdBeingReplaced = null;
     }, 500); // Adjust the timeout based on your animation duration
   }
+  
   
 
   function checkForMatches() {
@@ -175,27 +185,30 @@ function hasImmediateMatches() {
   
 
   function switchCandiesWithAnimation() {
-    // Calculate the direction of the drag
-    const directionX = squareIdBeingReplaced % width - squareIdBeingDragged % width;
-    const directionY = Math.floor(squareIdBeingReplaced / width) - Math.floor(squareIdBeingDragged / width);
+    // Switch candies with animation
+    const tempColor = squares[squareIdBeingReplaced].style.backgroundImage;
+    squares[squareIdBeingReplaced].style.backgroundImage = colorBeingDragged;
+    squares[squareIdBeingDragged].style.backgroundImage = tempColor;
   
-    // Switch candies with animation based on the direction
-    if (directionX !== 0 || directionY !== 0) {
-      const tempColor = squares[squareIdBeingReplaced].style.backgroundImage;
-      squares[squareIdBeingReplaced].style.backgroundImage = colorBeingDragged;
-      squares[squareIdBeingDragged].style.backgroundImage = tempColor;
+    // Add animation classes after the animation completes
+    squares[squareIdBeingReplaced].classList.add('candy-animation');
+    squares[squareIdBeingDragged].classList.add('candy-animation');
   
-      // Add animation classes
-      squares[squareIdBeingReplaced].classList.add('candy-animation');
-      squares[squareIdBeingDragged].classList.add('candy-animation');
+    // Remove animation classes after the animation completes
+    setTimeout(() => {
+      squares[squareIdBeingReplaced].classList.remove('candy-animation');
+      squares[squareIdBeingDragged].classList.remove('candy-animation');
   
-      // Remove animation classes after the animation completes
+      // Check for matches after the candies have settled
       setTimeout(() => {
-        squares[squareIdBeingReplaced].classList.remove('candy-animation');
-        squares[squareIdBeingDragged].classList.remove('candy-animation');
-      }, 500); // Adjust the timeout based on your animation duration
-    }
+        if (!checkForMatches()) {
+          // If there are no matches, move candies into squares below
+          moveIntoSquareBelow();
+        }
+      }, 100); // Adjust the timeout based on your animation duration
+    }, 500); // Adjust the timeout based on your animation duration
   }
+  
   
   
   function animateInvalidMove() {
